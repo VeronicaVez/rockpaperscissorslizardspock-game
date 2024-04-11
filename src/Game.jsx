@@ -41,11 +41,11 @@ function Game() {
       ) {
         const updatedUserPoints = userPoints + 1
         setUserPoints(updatedUserPoints)
-        setResult("You win this point")
+        setResult("Yeyyy, you win this point!")
         if (updatedUserPoints === 5) {
           const over = true
           setGameOver(over)
-          setResult("You wins!")
+          setResult("Well done! You win!")
         }
       }
     }
@@ -64,16 +64,16 @@ function Game() {
       ) {
         const updatedComputerPoints = computerPoints + 1
         setComputerPoints(updatedComputerPoints)
-        setResult("Computer wins this point")
+        setResult("Nooo, the computer wins this point")
         if (updatedComputerPoints === 5) {
           const over = true
           setGameOver(over)
-          setResult("Computer wins!")
+          setResult("Nooo, computer wins!")
         }
       }
     }
     if (computerChoice === userChoice) {
-      setResult("Draw")
+      setResult("Nooo")
     }
   }, [computerChoice, userChoice])
 
@@ -94,23 +94,22 @@ function Game() {
         </div>
       </div>
       <div className="button-div">
-        {choices.map((choice, index) => (
-          <button
-            className="button"
-            key={index}
-            onClick={() => handleOnClick(choice)}
-          >
-            {choice}
-          </button>
-        ))}
-        <p>{result}</p>
-      </div>
-      <div>
+        {!gameOver &&
+          choices.map((choice, index) => (
+            <button
+              className="button"
+              key={index}
+              onClick={() => handleOnClick(choice)}
+            >
+              {choice}
+            </button>
+          ))}
         {gameOver && (
-          <button className="button-over" onClick={() => reset()}>
+          <button className="button" onClick={() => reset()}>
             Let's play again
           </button>
         )}
+        <h2>{result}</h2>
       </div>
     </div>
   )
