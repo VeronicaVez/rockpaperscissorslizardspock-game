@@ -1,0 +1,12 @@
+.game{
+    text-align: center;
+}
+
+.choices{
+    display: flex;
+    justify-content: center;
+}
+
+.choices img{
+    width: 50%;
+}
