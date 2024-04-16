@@ -7,7 +7,7 @@ function Game() {
   const [userPoints, setUserPoints] = useState(0)
   const [computerPoints, setComputerPoints] = useState(0)
   const [gameOver, setGameOver] = useState(false)
-  const [result, setResult] = useState("")
+  const [result, setResult] = useState("Welcome!")
 
   const choices = ["rock", "paper", "scissors", "lizard", "spock"]
 
@@ -71,9 +71,12 @@ function Game() {
           setResult("Nooo, computer wins!")
         }
       }
-    }
-    if (computerChoice === userChoice) {
-      setResult("Nooo")
+      if (
+        computerChoice === userChoice &&
+        (userPoints != 0 || computerPoints != 0)
+      ) {
+        setResult("Nooo")
+      }
     }
   }, [computerChoice, userChoice])
 
