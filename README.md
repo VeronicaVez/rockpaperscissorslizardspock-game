@@ -1,8 +1,27 @@
-# React + Vite
+# Rock Paper Scissors Lizard Spock Game
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to the Rock Paper Scissors Lizard Spock Game project. This game is an extended version of the classic Rock Paper Scissors game, popularized by the TV show "The Big Bang Theory".
 
-Currently, two official plugins are available:
+**Technologies Used**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+HTML, CSS, JavaScript, React.js
+
+**Game Objective**
+
+The objective of the game is to defeat your opponent by selecting a weapon that defeats their choice, according to the rules of Rock Paper Scissors Lizard Spock:
+
+Scissors cuts Paper
+Paper covers Rock
+Rock crushes Lizard
+Lizard poisons Spock
+Spock smashes Scissors
+Scissors decapitates Lizard
+Lizard eats Paper
+Paper disproves Spock
+Spock vaporizes Rock
+Rock crushes Scissors
+
+The player who wins a round gets a point. The game continues until the player, or the computer, reaches the winning score, which is 5.
+
+# Demo
+You can play the game live [here](https://rockpaperscissorslizardspock-game.netlify.app/).
